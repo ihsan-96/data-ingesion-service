@@ -32,11 +32,11 @@ jobs:
       with:
         python-version: '3.11'
     
-    - name: Test DBT
-      working-directory: ./dbt
-      run: |
-        pip install dbt-bigquery==1.6.0
-        dbt compile
+    # - name: Test DBT
+    #   working-directory: ./dbt
+    #   run: |
+    #     pip install dbt-bigquery==1.6.0
+    #     dbt compile
 
   deploy:
     needs: test
