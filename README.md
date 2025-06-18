@@ -47,7 +47,7 @@ cp go-service/.env.example .env
 ```bash
 cd terraform
 terraform init
-terraform plan -var="project_id=gcp-project-id"
+terraform plan
 terraform apply
 ```
 
