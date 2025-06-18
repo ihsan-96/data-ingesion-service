@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: data_ingestion
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: "{{ env_var('DATASET') }}"
+    tables:
+      - name: raw_logs
+        description: "Raw logs ingested from external service" 
