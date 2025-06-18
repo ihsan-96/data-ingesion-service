@@ -4,7 +4,7 @@ data_ingestion:
     dev:
       type: bigquery
       method: service-account
-      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      project: "{{ env_var('GCP_PROJECT_ID', 'project-id') }}"
       dataset: "{{ env_var('DATASET', 'data_ingestion') }}"
       keyfile: "../service-account.json"
       threads: 4
